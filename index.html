@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>东森综合台 IPTV 更新器</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="status-panel">
+        <div>
+          <p class="eyebrow">IPTV Channel Monitor</p>
+          <h1>东森综合台</h1>
+          <p class="summary" id="summary">正在读取最新状态...</p>
+        </div>
+        <div class="actions">
+          <a class="button primary" href="./data/ettv-variety.m3u">下载 M3U</a>
+          <a class="button" href="./data/ettv-variety.json">查看 JSON</a>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="metric">
+          <span>状态</span>
+          <strong id="status">-</strong>
+        </article>
+        <article class="metric">
+          <span>匹配源数</span>
+          <strong id="matchCount">-</strong>
+        </article>
+        <article class="metric">
+          <span>最后更新</span>
+          <strong id="updatedAt">-</strong>
+        </article>
+      </section>
+
+      <section class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>频道名</th>
+              <th>分组</th>
+              <th>来源</th>
+              <th>直播地址</th>
+            </tr>
+          </thead>
+          <tbody id="matches">
+            <tr>
+              <td colspan="4">暂无数据</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="note">
+        <strong>配置方式</strong>
+        <p>在 GitHub Secrets 中添加 <code>IPTV_SOURCE_URLS</code>，填入你有授权使用的 M3U 播放列表地址；多个地址可用换行或英文逗号分隔。</p>
+      </section>
+    </main>
+    <script src="./site.js"></script>
+  </body>
+</html>
